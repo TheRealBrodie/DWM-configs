@@ -1,0 +1,64 @@
+// dwmblocks blocks.h
+
+static const Block blocks[] = {
+
+    // Wi-Fi — white
+    {
+        "",
+        "sh -c 'printf \"^c#ffffff^󰤨 %s ^d^\" \"$(iwgetid -r 2>/dev/null || echo Offline)\"'",
+        5,
+        0
+    },
+
+    // Small spacing
+    {
+        " ",
+        "",
+        5,
+        0
+    },
+
+    // Battery — white
+    {
+        "",
+        "sh -c 'printf \"^c#ffffff^󰁹 %s%% ^d^\" \"$(cat /sys/class/power_supply/BAT1/capacity)\"'",
+        10,
+        0
+    },
+
+    // Small spacing
+    {
+        " ",
+        "",
+        5,
+        0
+    },
+
+    // Date — white
+    {
+        "",
+        "sh -c 'printf \"^c#ffffff^󰃭 %s ^d^\" \"$(date +\"%Y-%m-%d\")\"'",
+        60,
+        0
+    },
+
+    // Small spacing
+    {
+        " ",
+        "",
+        5,
+        0
+    },
+
+    // Time — white
+    {
+        "",
+        "sh -c 'printf \"^c#ffffff^󰥔 %s ^d^\" \"$(date +\"%H:%M\")\"'",
+        5,
+        0
+    },
+};
+
+// No delimiter
+static char delim[] = "";
+static unsigned int delimLen = 1;
